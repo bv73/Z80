@@ -1,0 +1,17 @@
+;D - YCOOR
+BEGADD	LD	A,D
+	AND	24
+	LD	H,A
+	LD	A,D
+	AND	7
+	RRCA
+	RRCA
+	RRCA
+	LD	L,A
+	LD	DE,#4000
+	ADD	HL,DE
+	LD	A,(POS)
+	ADD	A,L
+	LD	L,A
+	RET
+

@@ -1,0 +1,18 @@
+;D - YCOOR [0,23]
+;E - XCOOR [0,31]
+BEGADD	LD	A,D
+	AND	24
+	LD	H,A
+	LD	A,D
+	AND	7
+	RRCA
+	RRCA
+	RRCA
+	LD	L,A
+	LD	A,E
+	LD	DE,#4000
+	ADD	HL,DE
+	ADD	A,L
+	LD	L,A
+	RET
+
